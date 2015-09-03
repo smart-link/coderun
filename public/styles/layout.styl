@@ -1,0 +1,26 @@
+@require "common"
+
+layout-max-width = 1000px
+
+container(width = 100%)
+    position relative
+    display block
+    width width
+
+
+container-inner(width = layout-max-width)
+    position relative
+    display block
+    margin 0 auto
+    padding 10px
+    max-width width
+
+
+.container
+    container()
+
+.container-inner
+    container-inner()
+
+.panel
+    width 100%

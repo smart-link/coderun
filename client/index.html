@@ -1,0 +1,21 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+</head>
+<body>
+    <toolbar></toolbar>
+    <div class="view" ui-view=""></div>
+</body>
+
+
+<template name="quickFormWithParameters">
+  {{#autoForm collection="Courses" id="insertCoursesForm" type="insert"}}
+    <fieldset>
+      <legend>Add a Book</legend>
+      {{> afQuickField name='name'}}
+      {{> afQuickField name='desc' rows=6}}
+      {{> afFieldInput name="picture" label="Choose file" remove-label="x"}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">저장하기</button>
+  {{/autoForm}}
+</template>

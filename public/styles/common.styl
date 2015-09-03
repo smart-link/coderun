@@ -1,0 +1,79 @@
+// Colors from http://clrs.cc/
+color-aqua = #59CFE1
+color-blue = #0074D9
+color-navy = #001F3F
+color-teal = #39CCCC
+color-green = #2ECC40
+color-olive = #3D9970
+color-lime = #01FF70
+color-yellow = #FFDC00
+color-orange = #FF851B
+color-red = #FF4136
+color-fuchsia = #F012BE
+color-purple = #ED038C //
+color-maroon = #85144B
+color-white = #fff
+color-silver = #ddd
+color-gray = #aaa
+color-black = #111
+color-lightsilver = lighten(color-silver, 10%)
+color-dimgray = darken(color-gray, 20%)
+
+color-bg = color-white
+
+color-text = #727272
+color-text-strong = #2c3e50
+color-text-soft = #737c85
+color-text-bold = #4e4e4e
+color-text-highlighted = #3498db
+color-border = #f0f0f0
+color-button-background = #4b7b98
+color-inactive-background = color-white
+color-active-background = #559fcc
+
+// Fonts
+font-family = 'Nanum Gothic', sans-serif !default
+font-family-logo = 'Lato', sans-serif !default
+font-weight-logo = 700 !default
+font-family-special = 'Source Sans Pro', sans-serif !default
+font-weight-special = 300 !default
+font-weight-special-bold = 600 !default
+
+padding-default = 3px
+
+clearfix()
+    &:before, &:after
+        content " " display table
+    &:after
+        clear both
+
+parent(width = 100%)
+    display table
+    width width
+
+child(width  = 50%, align = middle)
+    display table-cell
+    width width
+    vertical-align align
+
+logo(ratio = 1)
+    width 6.25rem * ratio
+    height 3.75rem * ratio
+    background-image url(/logo.png)
+    background-size contain
+    background-repeat no-repeat
+    background-position-x left
+    background-position-y center
+
+default-radius = 3px !default
+default-rounded = 1000px !default
+default-circled = 50% !default
+
+radius(radius = default-radius)
+    border-radius radius
+
+round()
+    border-radius default-rounded
+
+circle()
+    border-radius default-circleed

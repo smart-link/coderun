@@ -1,0 +1,16 @@
+{
+  "generator-angular-meteor": {
+    "filters": {
+      "coffee": true,
+      "jade": true,
+      "stylus": true,
+      "pagination": false,
+      "framework": "none",
+      "bower": true,
+      "auth": true,
+      "oauth": true,
+      "facebookAuth": true
+    },
+    "appname": "coderun"
+  }
+}

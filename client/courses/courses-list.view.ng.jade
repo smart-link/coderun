@@ -1,0 +1,24 @@
+.courses-list.container-inner
+
+    h1.menu-title TECH 강좌 리스트
+    
+    
+    form(id="insertCoursesForm" ng-submit='save()', name='form', novalidate='')
+        p.input-group
+          meteor-include(src="quickFormWithParameters")
+
+    .panel
+        .panel-cource(ng-repeat='course in courses')
+            img(ng-src="{{getPhoto(course);}}")
+        
+            h1.title
+                a(href='/courses/{{course._id}}') {{ course.name }}
+            p.desc {{ course.desc }}
+            
+            
+            button.delete(ng-click="remove(course)") 삭제하기
+            
+    p Total number of courses: {{courses.length}}
+
+
+    
